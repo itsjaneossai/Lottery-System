@@ -1,0 +1,376 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  background: #050608;
+  color: #f9fafb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* LEFT – AUTH SIDE */
+
+.authWrapper {
+  width: 45%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 32px;
+  background: #050608;
+}
+
+.authInner {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topLogo {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: #0c0e12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.authCard {
+  padding: 8px 0 0;
+}
+
+.authTitle {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.authSubtitle {
+  font-size: 0.9rem;
+  color: rgba(148, 163, 184, 0.96);
+  margin-bottom: 20px;
+}
+
+/* FORM */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fieldGroup label {
+  font-size: 0.82rem;
+  color: rgba(148, 163, 184, 0.98);
+}
+
+.fieldGroup input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #373a41;
+  background: #050608;
+  color: #f9fafb;
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.fieldGroup input::placeholder {
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.fieldGroup input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.6);
+  background: #020617;
+}
+
+.formRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-size: 0.78rem;
+}
+
+.rememberLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #d1d5db;
+}
+
+.rememberLabel input {
+  width: 14px;
+  height: 14px;
+  accent-color: #22c55e;
+}
+
+.textLink {
+  border: none;
+  background: none;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0;
+}
+
+.textLink:hover {
+  color: #e5e7eb;
+}
+
+/* BUTTONS */
+
+.primaryBtn {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  font-size: 0.92rem;
+  font-weight: 600;
+  background: #008943;
+  color: #f9fafb;
+  cursor: pointer;
+  transition: transform 0.09s ease, box-shadow 0.09s ease, filter 0.09s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 12px 25px rgba(22, 163, 74, 0.4);
+}
+
+.primaryBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  background-color: #22262f;
+}
+
+.googleBtn {
+  margin-top: 8px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  width: 100%;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease,
+    transform 0.09s ease;
+}
+
+.googleBtn:hover {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(148, 163, 184, 0.9);
+  transform: translateY(-1px);
+}
+
+.googleIcon {
+  display: inline-flex;
+}
+
+/* FOOTER TEXT */
+
+.footerText {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(148, 163, 184, 0.96);
+}
+
+.linkBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #cecfd2;
+  font-size: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 750;
+}
+
+.devText {
+  margin-top: auto;
+  font-size: 0.75rem;
+  color: rgba(148, 163, 184, 0.7);
+}
+
+/* RIGHT – HERO SIDE */
+
+.hero {
+  width: 55%;
+  position: relative;
+  background: #000;
+  display: flex;
+}
+
+.heroImageWrapper {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(4, 13, 33, 0.95),
+    rgba(4, 13, 33, 0.2)
+  );
+}
+
+/* Testimonial overlay */
+
+.testimonialCard {
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  bottom: 32px;
+  padding: 20px 24px;
+  border-radius: 18px;
+  background: rgba(4, 13, 33, 0.96);
+  backdrop-filter: blur(22px);
+  color: #f9fafb;
+
+  /* animation bits */
+  opacity: 0;
+  transform: translateY(12px);
+  animation: testimonialFadeIn 0.35s ease-out forwards;
+}
+
+@keyframes testimonialFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quote {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.personRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.personName {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.personRole {
+  font-size: 0.78rem;
+  color: #cbd5f5;
+}
+
+.ratingBlock {
+  font-size: 0.85rem;
+}
+
+.stars {
+  letter-spacing: 0.1em;
+}
+
+/* Carousel controls */
+
+.testimonialFooter {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(148, 163, 184, 0.4);
+  padding: 0;
+  cursor: pointer;
+}
+
+.dotActive {
+  background: #f9fafb;
+}
+
+.testimonialNav {
+  display: flex;
+  gap: 8px;
+}
+
+.navBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 960px) {
+  .page {
+    flex-direction: column;
+  }
+
+  .authWrapper,
+  .hero {
+    width: 100%;
+  }
+
+  .authWrapper {
+    padding: 24px 20px 28px;
+  }
+
+  .hero {
+    min-height: 360px;
+  }
+
+  .testimonialCard {
+    left: 16px;
+    right: 16px;
+    bottom: 20px;
+  }
+}

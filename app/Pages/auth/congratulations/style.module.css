@@ -1,0 +1,50 @@
+.screen {
+  min-height: 100vh;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 64px;
+  width: 90%;
+  margin: auto;
+}
+
+/* small emoji at top */
+.bee {
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+/* text section */
+.textBlock {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #9ca3af;
+}
+
+/* big lion */
+.lionWrapper {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lionEmoji {
+  font-size: 9rem; /* controls how huge the lion is */
+  display: inline-block;
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.6));
+}

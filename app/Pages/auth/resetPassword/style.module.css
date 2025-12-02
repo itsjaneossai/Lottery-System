@@ -1,0 +1,113 @@
+.page {
+  min-height: 100vh;
+  background: #050608;
+  color: #f9fafb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+/* Center card */
+.card {
+  width: 100%;
+  max-width: 480px;
+  padding: 32px 24px 26px;
+  border-radius: 18px;
+  background: #050608;
+}
+
+/* Heading */
+.header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fieldGroup label {
+  font-size: 0.82rem;
+  color: rgba(148, 163, 184, 0.98);
+}
+
+.fieldGroup input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #373a41;
+  background: #050608;
+  color: #f9fafb;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.fieldGroup input::placeholder {
+  color: rgba(148, 163, 184, 0.9);
+}
+
+.fieldGroup input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.5);
+  background: #020617;
+}
+
+/* error text */
+.errorText {
+  margin: -4px 0 4px;
+  font-size: 0.78rem;
+  color: #f97373;
+}
+
+/* Button */
+.primaryBtn {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  font-size: 0.94rem;
+  font-weight: 600;
+  background: #008943;
+  color: #f9fafb;
+  cursor: pointer;
+  transition: transform 0.09s ease, box-shadow 0.09s ease, filter 0.09s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 10px 22px rgba(22, 163, 74, 0.4);
+}
+
+.primaryBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  background-color: #22262f;
+}
