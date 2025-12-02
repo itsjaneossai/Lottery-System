@@ -226,3 +226,21 @@
 .backLink:hover {
   color: #ffffff;
 }
+.inputError {
+  border-color: #f97373;
+  box-shadow: 0 0 0 1px rgba(248, 113, 113, 0.4);
+}
+
+.errorText {
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: #f97373;
+}
+
+/* disabled submit button */
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}

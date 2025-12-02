@@ -1,17 +1,30 @@
 "use client";
 import { useState } from "react";
-import { CluseredDps, GoogleBtn, GreenStar, Stars } from "@/app/components/svgs";
+import {
+  CluseredDps,
+  GoogleBtn,
+  GreenStar,
+  Stars,
+} from "@/app/components/svgs";
 import styles from "./style.module.css";
-import { isValidEmail, isValidPassword } from "@/app/servicesAndHelpers/formVlidation";
+import {
+  isValidEmail,
+  isValidPassword,
+} from "@/app/servicesAndHelpers/formVlidation";
+import { useRouter } from "next/navigation";
 
 export default function SignupPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const allFilled =
+    name.trim() !== "" && isValidEmail(email) && isValidPassword(password);
+  const router = useRouter();
 
-  // Check if button should be enabled
-  const allFilled = name.trim() !== "" && isValidEmail(email)  && isValidPassword(password);
-
+  const getStarted = () => {
+    //after api call
+    router.push("/auth/emailVerification?isSignup=true");  
+  };
   return (
     <main className={styles.page}>
       <section className={styles.hero}>
@@ -42,7 +55,7 @@ export default function SignupPage() {
 
       <section className={styles.authWrapper}>
         <div className={styles.authCard}>
-        <GreenStar/>
+          <GreenStar />
           <h2 className={styles.authTitle}>Sign up</h2>
           <p className={styles.authSubtitle}>
             Create your account and enter the den.
@@ -86,22 +99,25 @@ export default function SignupPage() {
             </div>
 
             <button
-              type="submit"
+            type="button"
               className={styles.primaryBtn}
               disabled={!allFilled}
+             onClick={getStarted}
             >
               Get started
             </button>
 
             <button type="button" className={styles.googleBtn}>
-              <span className={styles.googleIcon}><GoogleBtn/></span>
+              <span className={styles.googleIcon}>
+                <GoogleBtn />
+              </span>
               <span>Sign up with Google</span>
             </button>
           </form>
 
           <p className={styles.footerText}>
             Already have an account?{" "}
-            <button className={styles.linkBtn}>Log in</button>
+            <button type="button" className={styles.linkBtn} onClick={()=>{router.push('/auth/login')}}>Log in</button>
           </p>
         </div>
       </section>

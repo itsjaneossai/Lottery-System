@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styles from "./style.module.css";
 import { UNEC, UNN } from "@/app/components/svgs";
+import { useRouter } from "next/navigation";
 
 type CampusId = "UNN" | "UNEC";
 
@@ -17,11 +18,11 @@ const CAMPUSES: {
 
 export default function CampusSelector() {
   const [selected, setSelected] = useState<CampusId | null>(null);
+  const router = useRouter();
 
   const handleChoose = () => {
     if (!selected) return;
-    // TODO: navigate or call API here
-    console.log("Chosen campus:", selected);
+    router.push("/auth/roleSelector")
   };
 
   return (
@@ -96,6 +97,7 @@ export default function CampusSelector() {
           className={`${styles.chooseButton} ${
             !selected ? styles.chooseButtonDisabled : ""
           }`}
+          
         >
           Choose campus
         </button>

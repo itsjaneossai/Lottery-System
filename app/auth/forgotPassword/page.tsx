@@ -3,23 +3,20 @@
 import { FormEvent, useState } from "react";
 import styles from "./style.module.css";
 import { isValidEmail } from "@/app/servicesAndHelpers/formVlidation";
+import { useRouter } from "next/navigation";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
-
+   const router = useRouter();
   const isValid = isValidEmail(email);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    if (!isValid) return;
-
-    // TODO: call your API to send reset link
-    console.log("Send reset link to:", email);
+    router.push("/auth/emailVerification?isSignup=false")
   };
 
   const handleBack = () => {
-    // TODO: route back to login page
-    console.log("Back to login");
+    router.push("/auth/login")
   };
 
   return (

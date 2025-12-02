@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styles from "./style.module.css";
 import { Alumni, PostGrad, Staff, UnderGrad } from "@/app/components/svgs";
+import { useRouter } from "next/navigation";
 // Replace these with your actual SVGs if you have them
 // import { UndergradSvg, PostgradSvg, AlumniSvg, StaffSvg } from "@/app/components/svgs";
 
@@ -38,16 +39,14 @@ const ROLES: {
 
 export default function RoleSelector() {
   const [selected, setSelected] = useState<RoleId | null>(null);
-
+ const router = useRouter();
   const handleContinue = () => {
     if (!selected) return;
-    // TODO: navigate or call API here
-    console.log("Chosen role:", selected);
+   router.push("/auth/userDetails")
   };
 
   const handleBack = () => {
-    // TODO: navigate back to campus page
-    console.log("Back to campus");
+    router.push("/auth/chooseCampus")
   };
 
   return (

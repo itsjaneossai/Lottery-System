@@ -8,6 +8,7 @@ import {
   isValidEmail,
   isValidPassword,
 } from "@/app/servicesAndHelpers/formVlidation";
+import { useRouter } from "next/navigation";
 
 type Testimonial = {
   quote: string;
@@ -42,17 +43,15 @@ const TESTIMONIALS: Testimonial[] = [
     org: "UNEC",
     rating: 4,
   },
-  
 ];
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
-
+  const router = useRouter();
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const currentTestimonial = TESTIMONIALS[testimonialIndex];
-
   const allFilled = isValidEmail(email) && isValidPassword(password);
 
   const handleSubmit = (e: FormEvent) => {
@@ -122,7 +121,7 @@ export default function LoginPage() {
                 <button
                   type="button"
                   className={styles.textLink}
-                  onClick={() => console.log("Forgot password")}
+                  onClick={() => router.push("/auth/forgotPassword")}
                 >
                   Forgot password
                 </button>
@@ -153,7 +152,7 @@ export default function LoginPage() {
               <button
                 type="button"
                 className={styles.linkBtn}
-                onClick={() => console.log("Go to sign up")}
+                onClick={() => router.push("/auth/signup")}
               >
                 Sign up
               </button>
@@ -194,9 +193,7 @@ export default function LoginPage() {
 
               <div className={styles.ratingBlock}>
                 <span className={styles.stars}>
-                  {"★"
-                    .repeat(currentTestimonial.rating)
-                    .padEnd(5, "☆")}
+                  {"★".repeat(currentTestimonial.rating).padEnd(5, "☆")}
                 </span>
               </div>
             </div>

@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import styles from "./style.module.css";
 import { isValidPassword } from "@/app/servicesAndHelpers/formVlidation";
+import { useRouter } from "next/navigation";
 
 export default function ResetPasswordPage() {
   const [password, setPassword] = useState("");
@@ -11,13 +12,12 @@ export default function ResetPasswordPage() {
   const strongEnough = isValidPassword(password);
   const matches = password === confirm && confirm !== "";
   const canSubmit = strongEnough && matches;
+   const router = useRouter();
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!canSubmit) return;
-
-    // TODO: call API with new password + reset token
-    console.log("Reset password to:", password);
+      router.push("/auth/resetSuccessful")
   };
 
   return (

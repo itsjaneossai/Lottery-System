@@ -2,8 +2,13 @@
 
 import { Confetti, Lion } from "@/app/components/svgs";
 import styles from "./style.module.css";
+import { useRouter } from "next/navigation";
 
 export default function DenWelcomePage() {
+  const router = useRouter();
+  setTimeout(() => {
+    router.push("/");
+  }, 2000);
   return (
     <div className={styles.screen}>
       <Confetti />

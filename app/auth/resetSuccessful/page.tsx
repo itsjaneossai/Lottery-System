@@ -1,12 +1,12 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import styles from "./style.module.css";
 
 export default function ResetSuccessPage() {
+  const router = useRouter();
   const handleContinue = () => {
-    // TODO: route to login/dashboard
-    // e.g. router.push("/login")
-    console.log("Continue to login");
+   router.push("/")
   };
 
   return (
