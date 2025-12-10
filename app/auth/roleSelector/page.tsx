@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./style.module.css";
-import { Alumni, PostGrad, Staff, UnderGrad } from "@/app/components/svgs";
+import { Alumni, PostGrad, Staff, SvgLines, UnderGrad, Users } from "@/app/components/svgs";
 import { useRouter } from "next/navigation";
 // Replace these with your actual SVGs if you have them
 // import { UndergradSvg, PostgradSvg, AlumniSvg, StaffSvg } from "@/app/components/svgs";
@@ -51,7 +51,17 @@ export default function RoleSelector() {
 
   return (
     <div className={styles.screen}>
+      <div className={styles.lines}>
+        <SvgLines />
+      </div>
+      <div className={styles.mail}>
+        <Users />
+      </div>
       <div className={styles.wrapper}>
+        <div className={styles.heading}>
+          <h1 className={styles.pageTitle}>User</h1>
+          <p className={styles.pageSubtitle}>Which user describes you?</p>
+        </div>
         {/* Cards grid */}
         <div className={styles.cardGrid}>
           {ROLES.map((role) => {

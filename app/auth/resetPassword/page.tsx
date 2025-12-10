@@ -4,6 +4,7 @@ import { FormEvent, useState } from "react";
 import styles from "./style.module.css";
 import { isValidPassword } from "@/app/servicesAndHelpers/formVlidation";
 import { useRouter } from "next/navigation";
+import { Reload, SvgLines } from "@/app/components/svgs";
 
 export default function ResetPasswordPage() {
   const [password, setPassword] = useState("");
@@ -22,6 +23,12 @@ export default function ResetPasswordPage() {
 
   return (
     <main className={styles.page}>
+       <div className={styles.lines}>
+        <SvgLines />
+      </div>
+      <div className={styles.mail}>
+        <Reload />
+      </div>
       <section className={styles.card}>
         <header className={styles.header}>
           <h1 className={styles.title}>Reset Password</h1>

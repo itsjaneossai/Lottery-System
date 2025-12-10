@@ -168,14 +168,6 @@ export default function LoginPage() {
       {/* RIGHT – HERO / CAROUSEL PANEL */}
       <section className={styles.hero}>
         <div className={styles.heroImageWrapper}>
-          {/* Replace with your actual image path */}
-          <Image
-            src="/images/login-hero.jpg"
-            alt="Borderless Tech student"
-            fill
-            className={styles.heroImage}
-            priority
-          />
 
           <div className={styles.heroOverlay} />
 

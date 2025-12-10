@@ -1,0 +1,140 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: rgba(5, 6, 8, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 100;
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 24px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.forYou {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e6eef3;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 200ms ease;
+}
+
+.forYou:hover {
+  color: #22c55e;
+}
+
+.forYou svg {
+  color: currentColor;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.loginBtn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #cbd5e1;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.loginBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #f8fafc;
+}
+
+.signupBtn {
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+  border: none;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.signupBtn:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navContent {
+    padding: 0 16px;
+  }
+
+  .forYou {
+    font-size: 0.85rem;
+    gap: 6px;
+  }
+
+  .forYou svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .navRight {
+    gap: 8px;
+  }
+
+  .loginBtn,
+  .signupBtn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 56px;
+  }
+
+  .navContent {
+    padding: 0 12px;
+  }
+
+  .forYou {
+    font-size: 0.75rem;
+    gap: 4px;
+  }
+
+  .forYou svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .loginBtn,
+  .signupBtn {
+    padding: 4px 10px;
+    font-size: 0.7rem;
+  }
+}

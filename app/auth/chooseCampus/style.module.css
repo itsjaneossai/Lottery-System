@@ -1,19 +1,28 @@
 .screen {
   color: #ffffff;
   display: flex;
-  align-items: center;
   justify-content: center;
   padding: 0 1rem;
   background: transparent;
 }
-
+.lines {
+  position: fixed;
+  top: -27%;
+ 
+}
+.mail{
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  top: 70px;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
   gap: 60px;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  margin-top: 150px;
 }
 
 /* Cards row */
@@ -120,4 +129,43 @@ color: #94979C;
   color: #d1fae5;
   box-shadow: none;
   transform: none;
+}
+
+/* Page heading (Choose Campus) */
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: 880px;
+  width: 100%;
+}
+
+.pageTitle {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}
+
+.pageSubtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .pageTitle {
+    font-size: 36px;
+  }
+
+  .pageSubtitle {
+    font-size: 14px;
+  }
 }

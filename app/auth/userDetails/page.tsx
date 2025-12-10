@@ -4,6 +4,7 @@ import { useState, FormEvent, useRef } from "react";
 import styles from "./style.module.css";
 import { FiCalendar } from "react-icons/fi";
 import { useRouter } from "next/navigation";
+import { SvgLines, UserDetails } from "@/app/components/svgs";
 
 type Gender = "male" | "female" | null;
 
@@ -36,7 +37,7 @@ export default function UserDetailsPage() {
   const [gender, setGender] = useState<Gender>(null);
   const [errors, setErrors] = useState<FormErrors>({});
   const dateRef = useRef<HTMLInputElement | null>(null);
-   const router = useRouter();
+  const router = useRouter();
 
   const validateForm = (): boolean => {
     const nextErrors: FormErrors = {};
@@ -60,7 +61,7 @@ export default function UserDetailsPage() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
-router.push("/auth/congratulations")
+    router.push("/auth/congratulations");
   };
 
   const handleBack = () => {
@@ -78,7 +79,18 @@ router.push("/auth/congratulations")
 
   return (
     <div className={styles.screen}>
+      <div className={styles.lines}>
+        <SvgLines />
+      </div>
+      <div className={styles.mail}>
+        <UserDetails />
+      </div>
+
       <form className={styles.formCard} onSubmit={handleSubmit}>
+        <div className={styles.heading}>
+          <h1 className={styles.pageTitle}>User Details</h1>
+          <p className={styles.pageSubtitle}>Add more information about you</p>
+        </div>
         {/* Faculty */}
         <div className={styles.fieldGroup}>
           <label className={styles.label}>Faculty</label>
@@ -193,9 +205,7 @@ router.push("/auth/congratulations")
               <span>Female</span>
             </button>
           </div>
-          {errors.gender && (
-            <p className={styles.errorText}>{errors.gender}</p>
-          )}
+          {errors.gender && <p className={styles.errorText}>{errors.gender}</p>}
         </div>
 
         {/* Submit */}

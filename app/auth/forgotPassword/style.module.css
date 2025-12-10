@@ -5,19 +5,30 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
   display: flex;
-  align-items: center;
   justify-content: center;
+  
 }
-
+.lines {
+  position: fixed;
+  top: -27%;
+ 
+}
+.mail{
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  top: 70px;
+}
 /* Center card */
 .card {
   width: 100%;
   max-width: 440px;
-  padding: 32px 24px 26px;
+  padding: 0px 24px 26px;
   border-radius: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 150px;
 }
 
 /* Heading */

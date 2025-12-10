@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import styles from "./style.module.css";
+import { CheckMark, SvgLines } from "@/app/components/svgs";
 
 export default function ResetSuccessPage() {
   const router = useRouter();
@@ -11,6 +12,12 @@ export default function ResetSuccessPage() {
 
   return (
     <main className={styles.page}>
+       <div className={styles.lines}>
+        <SvgLines />
+      </div>
+      <div className={styles.mail}>
+        <CheckMark />
+      </div>
       <section className={styles.card}>
         <h1 className={styles.title}>It&apos;s all done</h1>
         <p className={styles.subtitle}>

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./style.module.css";
-import { UNEC, UNN } from "@/app/components/svgs";
+import { Campus, SvgLines, UNEC, UNN } from "@/app/components/svgs";
 import { useRouter } from "next/navigation";
 
 type CampusId = "UNN" | "UNEC";
@@ -27,7 +27,17 @@ export default function CampusSelector() {
 
   return (
     <div className={styles.screen}>
+      <div className={styles.lines}>
+        <SvgLines />
+      </div>
+      <div className={styles.mail}>
+        <Campus/>
+      </div>
       <div className={styles.wrapper}>
+        <div className={styles.heading}>
+          <h1 className={styles.pageTitle}>Campus</h1>
+          <p className={styles.pageSubtitle}>Which campus are you at?</p>
+        </div>
         <div className={styles.cardRow}>
           {CAMPUSES.map((campus) => {
             const isSelected = selected === campus.id;

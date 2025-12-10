@@ -8,7 +8,17 @@
   justify-content: center;
   padding: 24px 16px;
 }
-
+.lines {
+  position: fixed;
+  top: -27%;
+ 
+}
+.mail{
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  top: 70px;
+}
 /* Center block */
 .card {
   width: 100%;
@@ -17,6 +27,7 @@
   border-radius: 18px;
   background: #050608;
   text-align: center;
+  margin-top: 100px;
 }
 
 /* Heading */

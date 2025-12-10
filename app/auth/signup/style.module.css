@@ -17,10 +17,30 @@
   background: radial-gradient(circle at top left, #1e293b 0, #020617 55%);
   overflow: hidden;
   width: 55%;
-  align-items: center;
+  background-image: url("/oluwakemi.jpg");
+  background-size: cover;
+  background-position: 10%;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
 .heroCon {
+  position: relative;
+  z-index: 2;
+}
+
+.heroCon {
+  position: relative;
+  z-index: 2;
   width: 80%;
   margin: auto;
 }

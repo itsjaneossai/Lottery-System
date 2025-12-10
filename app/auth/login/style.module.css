@@ -10,7 +10,7 @@
 /* LEFT – AUTH SIDE */
 
 .authWrapper {
-  width: 45%;
+  width: 50%;
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -214,7 +214,7 @@
 /* RIGHT – HERO SIDE */
 
 .hero {
-  width: 55%;
+  width: 50%;
   position: relative;
   background: #000;
   display: flex;
@@ -224,6 +224,9 @@
   position: relative;
   flex: 1;
   overflow: hidden;
+  background-image: url("/gift-habeshaw-kSTcz5gE018-unsplash.jpg");
+  background-size: cover;
+   background-position: 50%;
 }
 
 .heroImage {
@@ -352,7 +355,7 @@
 
 @media (max-width: 960px) {
   .page {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .authWrapper,
