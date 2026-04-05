@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #A355EB; 
+    font-family: 'Gorditas', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Main box styling */
+
+.welcome {
+    background-color: #9847da;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    margin: 100px;
+    /* height: 100vh; */
+    max-width: 500px;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.welcome:hover {
+    transform: scale(1.05);
+}
+
+
+/* Guess Input box */
+#guessInput {
+  width: 180px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px solid #000;
+  margin-bottom: 20px;
+}
+
+
+/* Button styling */
+button {
+    background: #000000ac; 
+    color: white;
+    border: none;
+    border-radius: 30px;
+    width: 140px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover,
+button:focus {
+    background-color: green;
+    outline: 2px solid white;
+}
+
+
+
+/* Responsive tweaks */
+@media screen and (max-width: 480px) {
+    .welcome {
+        padding: 40px 20px;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 120px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
+
+
+.rules {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+  padding: 10px;
+  background-color: #fefefe;
+  color: black;
+  font-weight: 300;
+  background-color: rgb(165, 192, 207);
+  /* background-color: white; */
+  display: none;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%) scale(0.1);
+  transition: transform 0.4s, top 0.4s;
+}
+
+.rules.show {
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: red;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.divid {
+    border: none;
+    border-radius: 80px;
+    height: auto;
+    max-width: 500px;
+    padding: 40px;
+    margin: 100px;
+    text-align: center;
+    background-color: rgb(247, 247, 31);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.divid.show {
+    display: flex;
+}
+
+#quitbtn-exit:hover {
+    background-color: red;
+}
+
+#quitbtn-end:hover {
+    background-color: red;
+}
+
+#continue:hover {
+    background-color: green;
+}
+
+#nextguess {
+    background-color: brown;
+}
+
+#submitbtn:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* input box styling */
+input[type="number"] {
+    width: 180px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 30px;
+    text-align: center;
+    border: 2px solid #000;
+    margin-bottom: 15px;
+    font-family: 'Gorditas', sans-serif;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: green;
+    box-shadow: 0 0 5px rgba(0,128,0,0.4);
+}

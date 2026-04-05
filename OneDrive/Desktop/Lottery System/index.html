@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <meta name="description" content="Try our lottery system" />
+    <meta
+      name="keywords"
+      content="lottery, random numbers, game, wins, guesses, number generator"
+    />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <title>Jeanie's Lottery</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <!-- Welcome -->
+      <section class="welcome" id="go">
+        <h1>Lottery for all!!!</h1>
+        <p>Can you guess the six(6) random numbers?</p>
+        <button
+          onclick="LotteryNum(); Rules()"
+          aria-label="Start the lottery"
+        >
+          Start
+        </button>
+      </section>
+
+      <!-- Start -->
+      <section id="start" class="divid">
+        <h2 class="hidden">Random numbers generated:</h2>
+        <p>******</p>
+        <p>Your guesses:</p>
+        <p id="guess">--</p>
+        <input type="number" id="guessinput-start" placeholder="Enter number 1-90" />
+        <button id="nextguess-start">Next Guess</button>
+      </section>
+
+      <!-- Decision -->
+      <section id="exit" class="divid">
+        <h1>Welldone, friend!</h1>
+        <p>
+          You have guessed two random numbers. You can choose to Continue or
+          Quit.
+        </p>
+        <button id="quitbtn-exit">Quit</button>
+        <button id="continue">Continue</button>
+      </section>
+
+      <!-- Continuation to final -->
+      <section id="continual" class="divid">
+        <h1 class="hidden">Random numbers generated:</h1>
+        <p id="lucky-final">******</p>
+        <p>Your guesses:</p>
+        <p id="guess-final">--</p>
+        <input type="number" id="guessinput-continue" placeholder="Enter number 1-90" />
+        <div class="btn-group">
+        <button id="nextguess-continue">Next Guess</button>
+        <!-- next guess should be unclickable after j = 6 -->
+        <button id="quitbtn-end">Quit</button>
+        <button id="submitbtn">Submit</button>
+        </div>
+      </section>
+
+      <!-- Final -->
+      <section id="final" class="divid">
+        <p id="lucky"></p>
+        <p id="guess-finals"></p>
+        <p id="wins"></p>
+        <button id="retrybtn">Play Again</button>
+      </section>
+
+      <!-- Rules -->
+      <aside class="rules">
+        <span
+          class="closebtn"
+          onclick="closeRules()"
+          >&times;</span
+        >
+        <h2>Rules of the lottery</h2>
+        <p><em>PRIVACY NOTE: WE STORE NOTHING!</em></p>
+        <ol>
+          <li>The computer has generated 6 random numbers.</li>
+          <li>You are to guess 6 number from 1 to 90</li>
+          <li>You can't quit after the first number</li>
+          <li>You can quit after the second number to the fifth number</li>
+          <li>
+            #Feel free to drop your feedbacks in my email (link:
+            <a href="mailto:jane.jeanelle@gmail.com?subject=Subject&body=Body"
+              >Click here</a
+            >)
+          </li>
+        </ol>
+      </aside>
+
+      <footer>
+        <p>© 2025 Jeanie's Lottery.</p>
+        <p>
+          This lightweight site stores no data and is designed for mininal
+          energy use.💚<br />
+          Built with ❤️ using HTML, CSS And Javascript
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
+
+<!-- a reveal? -->
